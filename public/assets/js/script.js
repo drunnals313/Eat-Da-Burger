@@ -4,7 +4,7 @@ $(function () {
 
  
     $(".create-update-form").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
+       
         event.preventDefault();
 
         var submittedBurger = {
@@ -17,13 +17,14 @@ $(function () {
             data: submittedBurger
         }).then(
             function () {
-                console.log("Added new burger");
                 location.reload();
             }
         );
     }); 
     
-    $("#devourNow").on("click", function (event) {
+
+    // not devouring the burgers correctly in deployed heroku version   almost there
+    $(".devourNow").on("click", function (event) {
         var id = $(this).data("id");
         var eatNow = $(this).data("eatburger");
 
