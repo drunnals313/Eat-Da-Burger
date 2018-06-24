@@ -1,6 +1,6 @@
-//need ajax put call her for burger_id
+
 $(function () {
-    $("#devourNow").on("click", function (event) {
+    /* $("#devourNow").on("click", function (event) {
         var id = $(this).data("id");
         var eatNow = $(this).data("eatburger");
 
@@ -15,11 +15,11 @@ $(function () {
         }).then(
             function () {
                 console.log("changed to", orderUp);
-                // Reload the page to get the updated list
+                
                 location.reload();
             }
         );
-    });
+    }); */
 
  
     $(".create-update-form").on("submit", function (event) {
