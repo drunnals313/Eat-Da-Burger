@@ -1,11 +1,11 @@
 //need ajax put call her for burger_id
 $(function () {
     $("#devourNow").on("click", function (event) {
-        var id = $(this).data("value");
-        var orderUp = $(this).data("name");
+        var id = $(this).data("id");
+        var eatNow = $(this).data("eatburger");
 
         var orderOut = {
-            devoured: orderUp
+            devoured: eatNow
         };
 
         // Send the PUT request.
