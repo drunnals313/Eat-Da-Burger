@@ -1,25 +1,6 @@
 
 $(function () {
-    /* $("#devourNow").on("click", function (event) {
-        var id = $(this).data("id");
-        var eatNow = $(this).data("eatburger");
-
-        var orderOut = {
-            devoured: eatNow
-        };
-
-        // Send the PUT request.
-        $.ajax("./api/burgers/" + id, {
-            type: "PUT",
-            data: orderOut
-        }).then(
-            function () {
-                console.log("changed to", orderUp);
-                
-                location.reload();
-            }
-        );
-    }); */
+   
 
  
     $(".create-update-form").on("submit", function (event) {
@@ -40,5 +21,26 @@ $(function () {
                 location.reload();
             }
         );
-    });
+    }); 
+    
+    $("#devourNow").on("click", function (event) {
+        var id = $(this).data("id");
+        var eatNow = $(this).data("eatburger");
+
+        var orderOut = {
+            devoured: eatNow
+        };
+
+        // Send the PUT request.
+        $.ajax("./api/burgers/" + id, {
+            type: "PUT",
+            data: orderOut
+        }).then(
+            function () {
+                console.log("changed to", eatNow);
+                
+                location.reload();
+            }
+        );
+    }); 
 })
