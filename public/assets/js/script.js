@@ -1,8 +1,6 @@
 
 $(function () {
    
-
- 
     $(".create-update-form").on("submit", function (event) {
        
         event.preventDefault();
@@ -44,4 +42,4 @@ $(function () {
             }
         );
     }); 
-})
+});
