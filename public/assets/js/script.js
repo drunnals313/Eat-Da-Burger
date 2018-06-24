@@ -1,8 +1,8 @@
 //need ajax put call her for burger_id
 $(function () {
-    $(".devoured").on("click", function (event) {
-        var id = $(this).data("id");
-        var orderUp = $(this).data("burger_name");
+    $("#devourNow").on("click", function (event) {
+        var id = $(this).data("value");
+        var orderUp = $(this).data("name");
 
         var orderOut = {
             devoured: orderUp
@@ -41,3 +41,4 @@ $(function () {
             }
         );
     });
+})
