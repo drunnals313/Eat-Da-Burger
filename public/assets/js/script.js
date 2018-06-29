@@ -25,15 +25,15 @@ $(function () {
     $(".devourNow").on("click", function (event) {
         var id = $(this).data("id");
         /* var eatNow = $(this).data("eatburger");
-
+*/
         var orderOut = {
-            devoured: eatNow
-        }; */
+            devoured: "true"
+        };
 
         // Send the PUT request.
         $.ajax("./api/burgers/" + id, {
             type: "PUT",
-            data: true                    //orderOut
+            data: orderOut
         }).then(
             function () {
                 console.log("changed to");   //eatNow
