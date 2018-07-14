@@ -1,4 +1,4 @@
-<li>
+{{!-- <li>
 	{{name}}
 
 	<button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
@@ -6,4 +6,14 @@
 	</button>
 
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li> --}}
+
+<li>
+    {{#unless devoured}}
+    <button class="change-devour btn btn-success" data-id="{{id}}" data-newdevour="{{devour}}">
+        {{#if devour}}{{this.burger_name}}{{/if}}
+    </button>
+    {{/unless}} {{#if devoured}}
+    <button class="delete-burger btn btn-danger" data-id="{{this.id}}"> {{this.burger_name}}</button>
+    {{/if}}
 </li>
