@@ -1,4 +1,6 @@
 body {
+    background: url('burgerbackground.jpg') no-repeat;
+    background-size: cover;
     font-family: 'Sriracha', cursive;
     width: 100%;
 }
