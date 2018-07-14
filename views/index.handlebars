@@ -3,7 +3,7 @@
 
 <div id='avail'>
     <h2>Available Burgers:</h2>
-    <ul>
+    {{!-- <ul>
         {{#each burgers}} {{#unless devoured}}
         {{!-- <li> --}}
             {{this.id}}. {{this.burger_name}}
@@ -18,20 +18,26 @@
                 <button class="btn btn-success" type="submit">^ Devour Now! ^</button>
             </form> --}}
 
-       {{!--  </li> --}}
+       {{!--  </li> 
         {{/unless}} {{/each}}
+    </ul> --}}
+    <ul>
+        {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block eat=true}} {{/unless}} {{/each}}
     </ul>
 </div>
 <div id='devoured'>
     <h2>Devoured Burgers: </h2>
 
-    <ul>
+    {{!-- <ul>
         {{#each burgers}} {{#if devoured}}
         {{!-- <li> --}}
             {{this.id}}. {{this.burger_name}}
             {{> burgers/burger-block devoured=false}}
         {{!-- </li> --}}
         {{/if}} {{/each}}
+    </ul> --}}
+    <ul>
+        {{#each burgers}} {{#if devoured}} {{> burgers/burger-block eat=false}} {{/if}} {{/each}}
     </ul>
 </div>
 <br>
