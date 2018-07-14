@@ -5,20 +5,20 @@
     <h2>Available Burgers:</h2>
     {{!-- <ul>
         {{#each burgers}} {{#unless devoured}}
-        {{!-- <li> --}}
+       <li>
             {{this.id}}. {{this.burger_name}}
             {{> burgers/burger-block devoured=true}}
-            {{!-- <form>
+            <form>
                 <input type="hidden" name="devoured" value="0">
                 <input type="hidden" data-eatburger="true" data-id="{{this.id}}">
                 <button class="devourNow btn btn-success" type="submit">^ Devour Now! ^</button>
-            </form> --}}
-            {{!-- <form action="/{{this.id}}?_method=PUT" method="POST">
+            </form> 
+            <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="false">
                 <button class="btn btn-success" type="submit">^ Devour Now! ^</button>
-            </form> --}}
+            </form> 
 
-       {{!--  </li> 
+       </li> 
         {{/unless}} {{/each}}
     </ul> --}}
     <ul>
@@ -30,10 +30,10 @@
 
     {{!-- <ul>
         {{#each burgers}} {{#if devoured}}
-        {{!-- <li> --}}
+        <li>
             {{this.id}}. {{this.burger_name}}
             {{> burgers/burger-block devoured=false}}
-        {{!-- </li> --}}
+        </li>
         {{/if}} {{/each}}
     </ul> --}}
     <ul>
